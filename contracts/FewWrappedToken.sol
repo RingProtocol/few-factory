@@ -42,6 +42,11 @@ contract FewWrappedToken is IFewWrappedToken {
         _;
     }
 
+    event Mint(address indexed minter, uint256 amount, address indexed to);
+    event Burn(address indexed burner, uint256 amount, address indexed to);
+    event Wrap(address indexed sender, uint256 amount, address indexed to);
+    event Unwrap(address indexed sender, uint256 amount, address indexed to);
+
     /// @notice Few wrapped token constructor
     constructor() public {
         uint chainId;

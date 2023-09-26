@@ -10,6 +10,8 @@ contract FewFactory is IFewFactory, CoreRef {
     address[] public override allWrappedTokens;
     address public override parameter;
 
+    event WrappedTokenCreated(address indexed originalToken, address wrappedToken, uint);
+
     constructor(address coreAddress) CoreRef(coreAddress) public {}
 
     function allWrappedTokensLength() external override view returns (uint) {
