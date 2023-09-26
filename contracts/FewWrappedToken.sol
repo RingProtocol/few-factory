@@ -164,8 +164,8 @@ contract FewWrappedToken is IFewWrappedToken {
     /// @param to wrapped token reciver address
     function wrapTo(uint256 amount, address to) public override returns (uint256) {
         require(amount > 0, "Few: can't wrap zero token");
-        _mint(to, amount);
         TransferHelper.safeTransferFrom(token, msg.sender, address(this), amount);
+        _mint(to, amount);
         emit Wrap(msg.sender, amount, to);
         return amount;
     }
