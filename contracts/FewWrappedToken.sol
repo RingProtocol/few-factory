@@ -3,10 +3,10 @@ pragma solidity =0.6.6;
 
 import '@uniswap/lib/contracts/libraries/TransferHelper.sol';
 
-import "./interfaces/IFewWrappedToken.sol";
+import './interfaces/IFewWrappedToken.sol';
 import './libraries/SafeMath.sol';
-import "./refs/ICoreRef.sol";
-import "./interfaces/IFewFactory.sol";
+import './refs/ICoreRef.sol';
+import './interfaces/IFewFactory.sol';
 
 /// @title Few Wrapped Token
 contract FewWrappedToken is IFewWrappedToken {
