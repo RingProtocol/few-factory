@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity >=0.5.0;
 
-import "./IERC20.sol";
+import './IERC20.sol';
 
 interface IFewERC20 is IERC20 {
     function DOMAIN_SEPARATOR() external view returns (bytes32);

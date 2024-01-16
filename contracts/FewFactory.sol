@@ -2,7 +2,7 @@
 pragma solidity =0.6.6;
 
 import './interfaces/IFewFactory.sol';
-import "./refs/CoreRef.sol";
+import './refs/CoreRef.sol';
 import './FewWrappedToken.sol';
 
 contract FewFactory is IFewFactory, CoreRef {

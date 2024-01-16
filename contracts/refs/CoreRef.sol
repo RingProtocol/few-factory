@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity =0.6.6;
 
-import "./ICoreRef.sol";
-import "@openzeppelin/contracts/utils/Pausable.sol";
+import './ICoreRef.sol';
+import '@openzeppelin/contracts/utils/Pausable.sol';
 
 /// @title A Reference to Core
 /// @notice defines some modifiers and utilities around interacting with Core

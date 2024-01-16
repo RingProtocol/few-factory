@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity >=0.5.0;
 
-import "../interfaces/IFewERC20.sol";
+import '../interfaces/IFewERC20.sol';
 
 interface IFewWrappedToken is IFewERC20 {
     event Mint(address indexed minter, uint256 amount, address indexed to);
