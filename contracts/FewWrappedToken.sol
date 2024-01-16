@@ -7,9 +7,10 @@ import './interfaces/IFewWrappedToken.sol';
 import './libraries/SafeMath.sol';
 import './refs/ICoreRef.sol';
 import './interfaces/IFewFactory.sol';
+import './BlastManagerFromFactory.sol';
 
 /// @title Few Wrapped Token
-contract FewWrappedToken is IFewWrappedToken {
+contract FewWrappedToken is IFewWrappedToken, BlastManagerFromFactory {
     using SafeMath for uint;
 
     string public override name;

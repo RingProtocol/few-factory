@@ -4,8 +4,10 @@ pragma solidity =0.6.6;
 import './interfaces/IFewFactory.sol';
 import './refs/CoreRef.sol';
 import './FewWrappedToken.sol';
+import './BlastManager.sol';
 
-contract FewFactory is IFewFactory, CoreRef {
+contract FewFactory is IFewFactory, CoreRef, BlastManager {
+
     mapping(address => address) public override getWrappedToken;
     address[] public override allWrappedTokens;
     address public override parameter;
