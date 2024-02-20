@@ -53,6 +53,12 @@ contract FewWrappedToken is IFewWrappedToken {
         assembly {
             chainId := chainid()
         }
+
+        factory = msg.sender;
+        token = IFewFactory(msg.sender).parameter();
+        name = string(abi.encodePacked("Few Wrapped ", IERC20(token).name()));
+        symbol = string(abi.encodePacked("fw", IERC20(token).symbol()));
+
         DOMAIN_SEPARATOR = keccak256(
             abi.encode(
                 keccak256('EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)'),
@@ -62,13 +68,6 @@ contract FewWrappedToken is IFewWrappedToken {
                 address(this)
             )
         );
-
-        factory = msg.sender;
-        token = IFewFactory(msg.sender).parameter();
-        name = IERC20(token).name();
-        name = string(abi.encodePacked("Few Wrapped ", name));
-        symbol = IERC20(token).symbol();
-        symbol = string(abi.encodePacked("fw", symbol));
     }
 
     function _mint(address to, uint value) internal {
