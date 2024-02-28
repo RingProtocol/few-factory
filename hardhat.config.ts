@@ -31,6 +31,10 @@ export default {
       url: 'https://sepolia.blast.io',
       accounts: privateKey ? [privateKey] : [],
     },
+    blast: {
+      url: 'https://mainnet-rpc.blast.io/n1cilwt3disiyxxdyqybhuf0usg2pyuoqmcftjab',
+      accounts: privateKey ? [privateKey] : [],
+    },
     arbitrumRinkeby: {
       url: `https://arbitrum-rinkeby.infura.io/v3/${process.env.INFURA_API_KEY}`,
     },
@@ -60,15 +64,15 @@ export default {
   // },
   etherscan: {
     apiKey: {
-      blast_sepolia: "blast_sepolia", // apiKey is not required, just set a placeholder
+      blast: "blast", // apiKey is not required, just set a placeholder
     },
     customChains: [
       {
-        network: "blast_sepolia",
-        chainId: 168587773,
+        network: "blast",
+        chainId: 81457,
         urls: {
-          apiURL: "https://api.routescan.io/v2/network/testnet/evm/168587773/etherscan",
-          browserURL: "https://testnet.blastscan.io"
+          apiURL: "https://api.routescan.io/v2/network/mainnet/evm/81457/etherscan",
+          browserURL: "https://mainnet.blastscan.io"
         }
       }
     ]
