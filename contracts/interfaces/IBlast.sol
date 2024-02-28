@@ -2,6 +2,7 @@
 pragma solidity >=0.5.0;
 
 interface IBlast{
+    function configureAutomaticYield() external;
     function configureClaimableGas() external;
     function claimAllGas(address contractAddress, address recipient) external returns (uint256);
     function claimMaxGas(address contractAddress, address recipientOfGas) external returns (uint256);

@@ -16,6 +16,7 @@ contract BlastManager is IBlastManager {
 
     constructor() public {
         manager = msg.sender;
+        BLAST.configureAutomaticYield();
         BLAST.configureClaimableGas();
     }
 
