@@ -32,7 +32,7 @@ export default {
       accounts: privateKey ? [privateKey] : [],
     },
     blast: {
-      url: 'https://mainnet-rpc.blast.io/n1cilwt3disiyxxdyqybhuf0usg2pyuoqmcftjab',
+      url: 'https://wandering-greatest-card.blast-mainnet.quiknode.pro/57de2f59e7773d827df7916a6a9080a6d2720a84',
       accounts: privateKey ? [privateKey] : [],
     },
     arbitrumRinkeby: {
@@ -64,15 +64,15 @@ export default {
   // },
   etherscan: {
     apiKey: {
-      blast: "blast", // apiKey is not required, just set a placeholder
+      blast: process.env.BLASTSCAN_API_KEY, // apiKey is not required, just set a placeholder
     },
     customChains: [
       {
         network: "blast",
         chainId: 81457,
         urls: {
-          apiURL: "https://api.routescan.io/v2/network/mainnet/evm/81457/etherscan",
-          browserURL: "https://mainnet.blastscan.io"
+          apiURL: "https://api.blastscan.io/api",
+          browserURL: "https://blastscan.io"
         }
       }
     ]
